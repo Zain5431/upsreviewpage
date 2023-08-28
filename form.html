@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form Example</title>
+    <style>
+        /* Add some basic styling to the form */
+        body {
+            font-size: 25px;
+            font-family: Monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        label, textarea, input[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit-feedback.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="feedback" style="margin-top: 10px;">What did you not like?</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <input  type="submit" style="font-size: 25px;" value="Submit">
+    </form>
+</body>
+</html>

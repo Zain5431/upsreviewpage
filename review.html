@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Feedback Form</title>
+    <style>
+        /* Center the form using flexbox */
+        body {
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+        }
+        /* Add some basic styling to the form */
+        form {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 400px; /* Set a maximum width for larger screens */
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        label, input[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for smaller screens (phones) */
+        @media screen and (max-width: 600px) {
+            label, input[type="submit"] {
+                font-size: 14px; /* Adjust the font size for phones */
+            }
+        }
+    </style>
+</head>
+<body style="font-size: 25px;">
+    <img src="download.png" alt="Store Logo">
+    <div>
+        <fieldset>
+            <legend>Did you like the service at the UPS store today?</legend>
+            <label>
+                <input type="radio" name="feedback" value="amazing" required>
+                Amazing
+            </label>
+            <label>
+                <input type="radio" name="feedback" value="not-great">
+                Not great
+            </label>
+            <br>
+        <input type="submit" value="Submit" onclick="radio()">
+        </fieldset>
+        
+    </div>
+</body>
+<script>
+    function radio(){
+        const radioButtons = document.getElementsByName('feedback');
+        for(const radioButton of radioButtons){
+            if(radioButton.checked){
+                if(radioButton.value == 'not-great'){
+                    window.location.href = 'https://www.youtube.com'
+                }else{
+                    window.location.href = 'https://www.google.com'
+                }
+            }
+        }
+    }
+</script>
+</html>
