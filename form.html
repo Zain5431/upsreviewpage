@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Feedback Form Example</title>
@@ -38,4 +38,73 @@
         <input  type="submit" style="font-size: 25px;" value="Submit">
     </form>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Feedback</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+    .btn-submit {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-submit:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img style="padding: 20px;" src="download.png" alt="">
+    <h1 class="mb-4 text-center">How was your visit to the UPS store today?</h1>
+    
+      <div class="form-check text-center">
+        <input class="form-check-input" type="radio" name="feedback" id="notGreat" value="notGreat">
+        <label class="form-check-label" for="notGreat">Not great</label>
+      </div>
+      <div class="form-check text-center">
+        <input class="form-check-input" type="radio" name="feedback" id="amazing" value="amazing">
+        <label class="form-check-label" for="amazing">Amazing</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-4 btn-submit" onclick="radio()">Submit</button>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+    function radio(){
+        const radioButtons = document.getElementsByName('feedback');
+        for(const radioButton of radioButtons){
+            if(radioButton.checked){
+                if(radioButton.value == 'notGreat'){
+                    window.location.href = 'https://forms.gle/UMzKDfM8GUx4UJPB9'
+                }else{
+                    window.location.href = 'https://g.co/kgs/nBafLZ'
+                }
+            }
+        }
+    }
+</script>
+
 </html>
